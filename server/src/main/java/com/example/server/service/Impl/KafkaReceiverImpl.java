@@ -3,7 +3,7 @@ package com.example.server.service.Impl;
 import com.example.common.dto.MessageDTO;
 import com.example.common.utils.ResponseCode;
 import com.example.common.utils.ResponseMessage;
-import com.example.server.service.JmsReceiver;
+import com.example.server.service.KafkaReceiver;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -21,7 +21,7 @@ import java.util.Collections;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class JmsReceiverImpl implements JmsReceiver {
+public class KafkaReceiverImpl implements KafkaReceiver {
 
     private final OperationServiceImpl operationsService;
     private final KafkaTemplate<String, ResponseMessage> kafkaTemplate;

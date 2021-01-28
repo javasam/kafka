@@ -1,6 +1,6 @@
 package com.example.client.service.impl;
 
-import com.example.client.service.JmsSender;
+import com.example.client.service.KafkaSender;
 import com.example.common.dto.MessageDTO;
 import com.example.common.utils.ResponseCode;
 import com.example.common.utils.ResponseMessage;
@@ -20,7 +20,7 @@ import java.util.UUID;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class JmsSenderImpl implements JmsSender {
+public class KafkaSenderImpl implements KafkaSender {
 
     private final KafkaTemplate<String, MessageDTO> kafkaTemplate;
     private final KafkaConsumer<String, ResponseMessage> kafkaConsumer;

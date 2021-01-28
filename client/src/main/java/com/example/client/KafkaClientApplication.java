@@ -1,6 +1,6 @@
 package com.example.client;
 
-import com.example.client.service.impl.JmsSenderImpl;
+import com.example.client.service.impl.KafkaSenderImpl;
 import com.example.client.utils.Operations;
 import com.example.common.dto.MessageDTO;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class KafkaClientApplication implements ApplicationRunner {
 
     @Autowired
-    private JmsSenderImpl jmsSender;
+    private KafkaSenderImpl jmsSender;
 
     @Value("${kafka.request.queue}")
     private String request_queue;

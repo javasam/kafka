@@ -1,5 +1,5 @@
 package com.example.server.service;
 
-public interface JmsReceiver {
+public interface KafkaReceiver {
     void receiveAndSend(String requestQueue, String responseQueue);
 }

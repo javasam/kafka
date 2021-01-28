@@ -1,6 +1,6 @@
 package com.example.client.service;
 
-import com.example.client.service.impl.JmsSenderImpl;
+import com.example.client.service.impl.KafkaSenderImpl;
 import com.example.common.dto.MessageDTO;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -18,10 +18,10 @@ import javax.jms.Message;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
-public class JmsSenderServiceTest extends TestCase {
+public class KafkaSenderServiceTest extends TestCase {
 
     @InjectMocks
-    JmsSenderImpl jmsSender;
+    KafkaSenderImpl jmsSender;
 
     @Mock
     MessageConverter messageConverter;

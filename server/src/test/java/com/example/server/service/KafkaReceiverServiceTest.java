@@ -3,7 +3,7 @@ package com.example.server.service;
 import com.example.common.dto.MessageDTO;
 import com.example.common.utils.ResponseCode;
 import com.example.common.utils.ResponseMessage;
-import com.example.server.service.Impl.JmsReceiverImpl;
+import com.example.server.service.Impl.KafkaReceiverImpl;
 import com.example.server.service.Impl.OperationServiceImpl;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -23,10 +23,10 @@ import javax.jms.Message;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
-public class JmsReceiverServiceTest extends TestCase {
+public class KafkaReceiverServiceTest extends TestCase {
 
     @InjectMocks
-    JmsReceiverImpl jmsReceiver;
+    KafkaReceiverImpl jmsReceiver;
 
     @Mock
     JmsTemplate jmsTemplate;

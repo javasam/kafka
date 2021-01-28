@@ -1,6 +1,6 @@
 package com.example.server;
 
-import com.example.server.service.Impl.JmsReceiverImpl;
+import com.example.server.service.Impl.KafkaReceiverImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KafkaServerApplication implements ApplicationRunner {
 
     @Autowired
-    private JmsReceiverImpl jmsReceiver;
+    private KafkaReceiverImpl jmsReceiver;
 
 
     @Value("${kafka.request.queue}")
